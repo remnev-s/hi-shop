@@ -8,50 +8,32 @@ export const Header = ({ count }) => {
   return (
     <>
       <header className={`${styles.header}`}>
-        <div className={`${styles.content}  wrapper`}>
-          <ul
-            className={`${styles.nav} ${styles.menu_hidden} ${styles.active}`}
-          >
-            <li className={`${styles.list} ${styles.nav__list}`}>
+        <div className={`${styles.content}   wrapper`}>
+          <ul className={`${styles.nav} `}>
+            <li className={`${styles.list}`}>
               <Link href='/products'>
                 <a className={`${styles.link}`}>Products</a>
               </Link>
             </li>
-            <li className={`${styles.list} ${styles.nav__list}`}>
+            <li className={`${styles.list} `}>
               <Link href='/journal'>
                 <a className={`${styles.link}`}>Journal</a>
               </Link>
             </li>
-            <li className={`${styles.list} ${styles.nav__list}`}>
+            <li className={`${styles.list} `}>
               <Link href='/about'>
                 <a className={`${styles.link}`}>About</a>
               </Link>
             </li>
           </ul>
-          <div
-            className={`${styles.burger}`}
-            onClick={() => console.log('burger')}
-          >
-            <span></span>
-          </div>
 
-          <Link href='/'>
-            <a className={`${styles.logo} ${styles.active} `}>
-              <Image src={logo} alt='logo' />
-            </a>
-          </Link>
-
-          <ul className={`${styles.nav} ${styles.user} ${styles.active}`}>
-            <li className={`${styles.list} {styles.nav__list}`}>
-              <Link
-                className={`${styles.link} ${styles.login}`}
-                login
-                href='/login'
-              >
-                <a className={`${styles.link} ${styles.login}`}>Login</a>
+          <ul className={`${styles.nav} ${styles.user} `}>
+            <li className={`${styles.list}`}>
+              <Link href='/login'>
+                <a className={`${styles.link} `}>Login</a>
               </Link>
             </li>
-            <li className={`${styles.list} ${styles.nav__list}`}>
+            <li className={`${styles.list}`}>
               <Link href='/cart'>
                 <a className={`${styles.link} ${styles.cart}`}>
                   Cart <span> ({count}) </span>
@@ -59,6 +41,19 @@ export const Header = ({ count }) => {
               </Link>
             </li>
           </ul>
+
+          <Link href='/'>
+            <a className={`${styles.logo} ${styles.active} `}>
+              <Image src={logo} alt='logo' />
+            </a>
+          </Link>
+        </div>
+
+        <div
+          className={`${styles.burger}`}
+          onClick={() => console.log('burger')}
+        >
+          <span></span>
         </div>
       </header>
     </>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../public/logo.svg';
+import logo from '../../public/logo.svg';
 import styles from './header.module.scss';
 
 export const Header = ({ count }) => {
@@ -11,17 +11,17 @@ export const Header = ({ count }) => {
         <div className={`${styles.content}   wrapper`}>
           <ul className={`${styles.nav} `}>
             <li className={`${styles.list}`}>
-              <Link href='/products'>
+              <Link href="/products">
                 <a className={`${styles.link}`}>Products</a>
               </Link>
             </li>
             <li className={`${styles.list} `}>
-              <Link href='/journal'>
+              <Link href="/journal">
                 <a className={`${styles.link}`}>Journal</a>
               </Link>
             </li>
             <li className={`${styles.list} `}>
-              <Link href='/about'>
+              <Link href="/about">
                 <a className={`${styles.link}`}>About</a>
               </Link>
             </li>
@@ -29,12 +29,12 @@ export const Header = ({ count }) => {
 
           <ul className={`${styles.nav} ${styles.user} `}>
             <li className={`${styles.list}`}>
-              <Link href='/login'>
+              <Link href="/login">
                 <a className={`${styles.link} `}>Login</a>
               </Link>
             </li>
             <li className={`${styles.list}`}>
-              <Link href='/cart'>
+              <Link href="/cart">
                 <a className={`${styles.link} ${styles.cart}`}>
                   Cart <span> ({count}) </span>
                 </a>
@@ -42,9 +42,9 @@ export const Header = ({ count }) => {
             </li>
           </ul>
 
-          <Link href='/'>
+          <Link href="/">
             <a className={`${styles.logo} ${styles.active} `}>
-              <Image src={logo} alt='logo' />
+              <Image src={logo} alt="logo" />
             </a>
           </Link>
         </div>

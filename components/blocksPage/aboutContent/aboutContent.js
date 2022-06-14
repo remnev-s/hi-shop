@@ -1,24 +1,22 @@
 import { Buttons } from '../../UI/buttons/buttons';
 import Image from 'next/image';
-import block from '../../../public/images/block-1.jpg';
 import styles from './aboutContent.module.scss';
+import clsx from 'clsx';
+import block from 'module-clsx';
+const style = block(styles);
 
-export const AboutContent = () => {
+export const AboutContent = ({ img, title, subtitle, layout }) => {
+  const classLayout = clsx({ class_layout: layout });
   return (
     <section className={`${styles.about_content}`}>
-      <div className={`${styles.inner} wrapper`}>
-        <Image src={block} alt="image" />
-        <div className={`${styles.text}`}>
-          <h1 className={`${styles.title}`}>
-            We made our tech accessories like we like our coffee — strong and
-            charged.
-          </h1>
+      <div className={`${styles.inner}  wrapper`}>
+        <Image src={img} layout="responsive" alt="picture device" />
+        <div className={`${styles.text} ${style(classLayout)}`}>
+          <h2 className={`${styles.title}`}>{title}</h2>
           <div className={`${styles.subtitle}`}>
-            <p>
-              You’ll be powered with more energy and avoid the midday crash.
-            </p>
+            <p>{subtitle}</p>
           </div>
-          <Buttons text="Shop now" />
+          <Buttons text="Shop Now" />
         </div>
       </div>
     </section>

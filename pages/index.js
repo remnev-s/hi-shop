@@ -7,9 +7,11 @@ import block1 from '../public/images/block-1.jpg';
 import block2 from '../public/images/block-2.jpg';
 
 import { Buttons } from '../components/UI/buttons/buttons';
+
 import { HeaderContent } from '../components/blocksPage/headerContent/headerContent';
 import { AboutContent } from '../components/blocksPage/aboutContent/aboutContent';
 import { Products } from '../components/products/products';
+import { ReadMore } from '../components/blocksPage/readContent/readContent';
 
 export default function Home() {
   return (
@@ -30,6 +32,7 @@ export default function Home() {
         title="Our most visible life hack is to blend in, while standing out."
         subtitle="“Luxury is having the best quality for practically nothing.”"
       />
+      <ReadMore />
     </>
   );
 }

@@ -1,0 +1,13 @@
+.read_more {
+  background-color: #d0cfcd;
+  padding: 6rem 0 10rem;
+
+  & .inner {
+    display: grid;
+    place-items: center;
+  }
+
+  & .img {
+    width: 100%;
+  }
+}

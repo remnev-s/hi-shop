@@ -10,7 +10,12 @@ export const AboutContent = ({ img, title, subtitle, layout }) => {
   return (
     <section className={`${styles.about_content}`}>
       <div className={`${styles.inner}  wrapper`}>
-        <Image src={img} layout="responsive" alt="picture device" />
+        <Image
+          src={img}
+          layout="responsive"
+          alt="picture device"
+          rel="preload"
+        />
         <div className={`${styles.text} ${style(classLayout)}`}>
           <h2 className={`${styles.title}`}>{title}</h2>
           <div className={`${styles.subtitle}`}>

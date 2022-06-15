@@ -25,6 +25,11 @@
   font-size: 1.6rem;
 }
 
+.old_price {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
 .price_sale {
   position: absolute;
   color: tomato;

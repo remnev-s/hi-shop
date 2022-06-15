@@ -38,6 +38,7 @@ export const Products = ({ title }) => {
               />
             </div>
             <Card
+              oldPrice={true}
               title={item.title}
               price={item.price}
               sale={item.sale}

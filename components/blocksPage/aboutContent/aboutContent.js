@@ -1,5 +1,6 @@
 import { Buttons } from '../../UI/buttons/buttons';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './aboutContent.module.scss';
 import clsx from 'clsx';
 import block from 'module-clsx';
@@ -21,7 +22,9 @@ export const AboutContent = ({ img, title, subtitle, layout }) => {
           <div className={`${styles.subtitle}`}>
             <p>{subtitle}</p>
           </div>
-          <Buttons text="Shop Now" />
+          <Link href="/products" passHref>
+            <Buttons text="Shop Now" />
+          </Link>
         </div>
       </div>
     </section>

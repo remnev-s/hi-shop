@@ -1,0 +1,77 @@
+.login {
+  height: 50vh;
+  margin: 15rem 0;
+  @media only screen and (max-width: 786px) {
+    margin: 10rem 0;
+    // margin-bottom: 20rem;
+  }
+}
+.container {
+  @media only screen and (max-width: 786px) {
+    // margin: 10rem 0;
+    // margin-bottom: 5rem;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
+
+  @media only screen and (max-width: 786px) {
+    column-gap: 3rem;
+  }
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    margin: 2rem 0;
+  }
+}
+
+.form {
+  margin-bottom: 5rem;
+  @media only screen and (max-width: 786px) {
+    margin-bottom: 5rem;
+  }
+}
+
+.form_description {
+  font-size: 3.6rem;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: 786px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.login_set {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border: 1px solid #151515;
+}
+
+.form label:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.form label:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.forg_password {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  opacity: 0.7;
+}
+
+.form_field {
+  outline: 1px solid red;
+  background-color: plum;
+}

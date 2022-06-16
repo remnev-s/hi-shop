@@ -16,7 +16,12 @@ import { ReadMore } from '../components/blocksPage/readContent/readContent';
 export default function Home() {
   return (
     <>
-      <HeaderContent />
+      <HeaderContent title="We understand tech accessories">
+        <p>No distracting logos.</p>
+        <p>Transparent pricing.</p>
+        <p>High quality and easy returns if we didn’t get it right.</p>
+        <p>We also decided, warranties should be included.</p>
+      </HeaderContent>
 
       <AboutContent
         img={block1}

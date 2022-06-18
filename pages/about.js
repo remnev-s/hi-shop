@@ -29,7 +29,7 @@ const AboutPage = () => {
       />
 
       <section className={`${styles.extract}`}>
-        <Image src={block5} alt="img" />
+        <Image src={block5} alt="img" layout="responsive" />
         <h2>
           Exceptional quality. No distracting logos. Transparent pricing. Easy
           returns. Warranty included.

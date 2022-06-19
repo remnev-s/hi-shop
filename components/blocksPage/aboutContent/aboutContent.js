@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import block from 'module-clsx';
 const style = block(styles);
 
-export const AboutContent = ({ img, title, subtitle, layout }) => {
+export const AboutContent = ({ img, title, subtitle, layout, children }) => {
   const classLayout = clsx({ class_layout: layout });
   return (
     <section className={`${styles.about_content}`}>
@@ -22,9 +22,7 @@ export const AboutContent = ({ img, title, subtitle, layout }) => {
           <div className={`${styles.subtitle}`}>
             <p>{subtitle}</p>
           </div>
-          <Link href="/products" passHref>
-            <Buttons text="Shop Now" />
-          </Link>
+          {children}
         </div>
       </div>
     </section>

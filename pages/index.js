@@ -6,6 +6,7 @@ import Image from 'next/image';
 import block1 from '../public/images/block-1.jpg';
 import block2 from '../public/images/block-2.jpg';
 
+import Link from 'next/link';
 import { Buttons } from '../components/UI/buttons/buttons';
 
 import { HeaderContent } from '../components/blocksPage/headerContent/headerContent';
@@ -27,7 +28,11 @@ export default function Home() {
         img={block1}
         title="We made our tech accessories like we like our coffee — strong and charged."
         subtitle="You’ll be powered with more energy and avoid the midday crash."
-      />
+      >
+        <Link href="/products" passHref>
+          <Buttons text="Shop Now" />
+        </Link>
+      </AboutContent>
 
       <Products />
 
@@ -36,7 +41,11 @@ export default function Home() {
         layout={true}
         title="Our most visible life hack is to blend in, while standing out."
         subtitle="“Luxury is having the best quality for practically nothing.”"
-      />
+      >
+        <Link href="/products" passHref>
+          <Buttons text="Shop Here" />
+        </Link>
+      </AboutContent>
       <ReadMore />
     </>
   );

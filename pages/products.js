@@ -1,7 +1,11 @@
+import App from 'next/app';
+import { HeaderContent } from '../components/blocksPage/headerContent/headerContent';
+import { AllProducts } from '../components/products/allproducts';
+
 const Products = () => {
   return (
     <>
-      <h1>Products page</h1>
+      <AllProducts sectionDistance={true} />
     </>
   );
 };

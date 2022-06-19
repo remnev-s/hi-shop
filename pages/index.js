@@ -11,7 +11,7 @@ import { Buttons } from '../components/UI/buttons/buttons';
 
 import { HeaderContent } from '../components/blocksPage/headerContent/headerContent';
 import { AboutContent } from '../components/blocksPage/aboutContent/aboutContent';
-import { Products } from '../components/products/products';
+import { AllProducts } from '../components/products/allproducts';
 import { ReadMore } from '../components/blocksPage/readContent/readContent';
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
         </Link>
       </AboutContent>
 
-      <Products />
+      <AllProducts sortProducts={true} />
 
       <AboutContent
         img={block2}

@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import block from 'module-clsx';
 const style = block(styles);
 
-const oneProducts = productsData.filter((item) => item.tag === 'oneProduct');
+const oneProducts = productsData.filter((item) => item.tag !== 'bundle');
 const bundle = productsData.filter((item) => item.tag === 'bundle');
 
 export const AllProducts = ({ title, sectionDistance, sortProducts }) => {

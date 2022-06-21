@@ -1,4 +1,5 @@
 import { productsData } from '../../components/utils/productsData';
+import { HedingProducts } from '../blocksPage/hedingProducts/hedingProducts';
 import { Card } from '../card/card';
 import styles from './allproducts.module.scss';
 import Image from 'next/image';
@@ -7,28 +8,18 @@ import clsx from 'clsx';
 import block from 'module-clsx';
 const style = block(styles);
 
-const oneProducts = productsData.filter((item) => item.tag !== 'bundle');
-const bundle = productsData.filter((item) => item.tag === 'bundle');
+const oneProducts = productsData.filter((item) => item.tag !== 'Bundles');
+const bundle = productsData.filter((item) => item.tag === 'Bundles');
 
 export const AllProducts = ({ title, sectionDistance, sortProducts }) => {
   const classSectionDistance = clsx({ section_distance: sectionDistance });
   const classSortProducts = clsx({ sort_products: sortProducts });
+
   return (
     <section
       className={`${styles.products} ${style(classSectionDistance)} wrapper`}
     >
-      <div className={`${styles.headings}`}>
-        <h2 className={`${styles.descriptions}`}> Products </h2>
-
-        <ul className={`${styles.sort} ${style(classSortProducts)}`}>
-          <li className={`${styles.sort_list}`}> All </li>
-          <li className={`${styles.sort_list}`}> Accessories </li>
-          <li className={`${styles.sort_list}`}> Adapters </li>
-          <li className={`${styles.sort_list}`}> Bundles </li>
-          <li className={`${styles.sort_list}`}> Cables </li>
-          <li className={`${styles.sort_list}`}> Chargers </li>
-        </ul>
-      </div>
+      <HedingProducts description="Products" />
       <ul className={`${styles.list}`}>
         {oneProducts.map((item) => (
           <li className={`${styles.item}`} key={item.id}>
@@ -44,7 +35,7 @@ export const AllProducts = ({ title, sectionDistance, sortProducts }) => {
           </li>
         ))}
       </ul>
-      <h2 className={`${styles.descriptions}`}> Bundle </h2>
+      <HedingProducts description="Bundle" />
       <ul className={`${styles.list}`}>
         {bundle.map((item) => (
           <li className={`${styles.item}`} key={item.id}>

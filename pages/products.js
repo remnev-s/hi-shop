@@ -18,51 +18,52 @@ const Products = () => {
   return (
     <>
       <section className={`${styles.products} wrapper`}>
-        <HedingProducts description="Products" />
-
-        <div className={`${styles.sort} `}>
-          <button
-            className={`${styles.sort_list}`}
-            onClick={(e) => onchange(e.target.value)}
-            value="All"
-          >
-            All
-          </button>
-          <button
-            className={`${styles.sort_list}`}
-            onClick={(e) => onchange(e.target.value)}
-            value="Accessories"
-          >
-            Accessories
-          </button>
-          <button
-            className={`${styles.sort_list}`}
-            onClick={(e) => onchange(e.target.value)}
-            value="Adapters"
-          >
-            Adapters
-          </button>
-          <button
-            className={`${styles.sort_list}`}
-            onClick={(e) => onchange(e.target.value)}
-            value="Bundles"
-          >
-            Bundles
-          </button>
-          <button
-            className={`${styles.sort_list}`}
-            onClick={(e) => onchange(e.target.value)}
-            value="Cables"
-          >
-            Cables
-          </button>
-          <button
-            className={`${styles.sort_list}`}
-            onClick={(e) => onchange(e.target.value)}
-            value="Chargers"
-          >
-            Chargers
-          </button>
+        <div className={`${styles.products_nav}`}>
+          <HedingProducts description="Products" />
+          <div className={`${styles.sort} `}>
+            <button
+              className={`${styles.sort_btn}`}
+              onClick={(e) => onchange(e.target.value)}
+              value="All"
+            >
+              All
+            </button>
+            <button
+              className={`${styles.sort_btn}`}
+              onClick={(e) => onchange(e.target.value)}
+              value="Accessories"
+            >
+              Accessories
+            </button>
+            <button
+              className={`${styles.sort_btn}`}
+              onClick={(e) => onchange(e.target.value)}
+              value="Adapters"
+            >
+              Adapters
+            </button>
+            <button
+              className={`${styles.sort_btn}`}
+              onClick={(e) => onchange(e.target.value)}
+              value="Bundles"
+            >
+              Bundles
+            </button>
+            <button
+              className={`${styles.sort_btn}`}
+              onClick={(e) => onchange(e.target.value)}
+              value="Cables"
+            >
+              Cables
+            </button>
+            <button
+              className={`${styles.sort_btn}`}
+              onClick={(e) => onchange(e.target.value)}
+              value="Chargers"
+            >
+              Chargers
+            </button>
+          </div>
         </div>
 
         <ul className={`${styles.list}`}>

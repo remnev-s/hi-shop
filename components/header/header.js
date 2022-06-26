@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/logo.svg';
 import styles from './header.module.scss';
 
 export const Header = ({ count }) => {
+  const [activeState, setActiveState] = useState(false);
+
+  function handelMenu() {
+    !activeState ? setActiveState(true) : setActiveState(false);
+  }
   return (
     <>
       <header className={`${styles.header}`}>
-        <div className={`${styles.content}   wrapper`}>
+        <div className={`${styles.content} wrapper`}>
           <ul className={`${styles.nav} `}>
             <li className={`${styles.list}`}>
               <Link href="/products">
@@ -49,10 +54,7 @@ export const Header = ({ count }) => {
           </Link>
         </div>
 
-        <div
-          className={`${styles.burger}`}
-          onClick={() => console.log('burger')}
-        >
+        <div className={`${styles.burger}`} onClick={handelMenu}>
           <span></span>
         </div>
       </header>

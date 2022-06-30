@@ -11,8 +11,6 @@
 }
 
 .img {
-  // margin-right: 5rem;
-  // max-width: 100%;
   width: 100%;
 }
 
@@ -22,6 +20,9 @@
   margin-top: 10rem;
   gap: 5rem;
   color: #353535;
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .title {

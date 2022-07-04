@@ -6,24 +6,23 @@ import styles from './header.module.scss';
 
 export const Header = ({ count }) => {
   const [visible, setVisible] = useState(false);
-  const [act, setAct] = useState(false);
 
   return (
     <header className={`${styles.header}`}>
-      <div className={visible ? styles.open : styles.content} wrapper='true'>
+      <div className={visible ? styles.open : styles.content} wrapper="true">
         <ul className={`${styles.nav} `} onClick={() => setVisible(!visible)}>
           <li className={`${styles.list}`}>
-            <Link href='/products'>
+            <Link href="/products">
               <a className={`${styles.link}`}>Products</a>
             </Link>
           </li>
           <li className={`${styles.list} `}>
-            <Link href='/journal'>
+            <Link href="/journal">
               <a className={`${styles.link}`}>Journal</a>
             </Link>
           </li>
           <li className={`${styles.list} `}>
-            <Link href='/about'>
+            <Link href="/about">
               <a className={`${styles.link}`}>About</a>
             </Link>
           </li>
@@ -34,12 +33,12 @@ export const Header = ({ count }) => {
           onClick={() => setVisible(!visible)}
         >
           <li className={`${styles.list}`}>
-            <Link href='/login'>
+            <Link href="/login">
               <a className={`${styles.link} `}>Login</a>
             </Link>
           </li>
           <li className={`${styles.list}`}>
-            <Link href='/cart'>
+            <Link href="/cart">
               <a className={`${styles.link} ${styles.cart}`}>
                 Cart <span> ({count}) </span>
               </a>
@@ -47,22 +46,20 @@ export const Header = ({ count }) => {
           </li>
         </ul>
 
-        <Link href='/'>
+        <Link href="/">
           <a
             className={`${styles.logo} ${styles.active} `}
             onClick={() => setVisible(!visible)}
           >
-            <Image src={logo} alt='logo' />
+            <Image src={logo} alt="logo" />
           </a>
         </Link>
       </div>
 
       <div
-        className={act ? styles.menu_active : styles.burger}
-        onClick={() => setAct(!act)}
-      >
-        <span></span>
-      </div>
+        className={visible ? styles.menu_active : styles.burger}
+        onClick={() => setVisible(!visible)}
+      ></div>
     </header>
   );
 };

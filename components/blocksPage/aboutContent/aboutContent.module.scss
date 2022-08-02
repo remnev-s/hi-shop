@@ -1,13 +1,8 @@
 .about_content {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // margin-top: 10rem;
-  // gap: 5rem;
   margin-bottom: 13.5rem;
 
   @media only screen and (max-width: 650px) {
     grid-template-columns: 1fr;
-    text-align: center;
   }
 }
 

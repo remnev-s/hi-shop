@@ -7,59 +7,51 @@ import styles from './header.module.scss';
 export const Header = ({ count }) => {
   const [visible, setVisible] = useState(false);
 
+  function handelMenu() {
+    !visible ? setVisible(true) : setVisible(false);
+  }
   return (
-    <header className={`${styles.header}`}>
-      <div className={visible ? styles.open : styles.content} wrapper="true">
-        <ul className={`${styles.nav} `} onClick={() => setVisible(!visible)}>
-          <li className={`${styles.list}`}>
-            <Link href="/products">
-              <a className={`${styles.link}`}>Products</a>
-            </Link>
-          </li>
-          <li className={`${styles.list} `}>
-            <Link href="/journal">
-              <a className={`${styles.link}`}>Journal</a>
-            </Link>
-          </li>
-          <li className={`${styles.list} `}>
-            <Link href="/about">
-              <a className={`${styles.link}`}>About</a>
-            </Link>
-          </li>
-        </ul>
-
-        <ul
-          className={`${styles.nav} ${styles.user} `}
-          onClick={() => setVisible(!visible)}
+    <>
+      <header>
+        <nav
+          className={`${styles.main_nav} ${
+            visible ? styles.nav__open : null
+          } wrapper`}
         >
-          <li className={`${styles.list}`}>
+          <ul onClick={() => setVisible(false)} className={styles.nav}>
+            <Link href="/products">
+              <li className={`${styles.list}`}>Products</li>
+            </Link>
+            <Link href="/journal">
+              <li className={`${styles.list} `}>Journal</li>
+            </Link>
+            <Link href="/about">
+              <li className={`${styles.list} `}>About</li>
+            </Link>
+          </ul>
+
+          <ul onClick={() => setVisible(false)} className={styles.nav}>
             <Link href="/login">
-              <a className={`${styles.link} `}>Login</a>
+              <li className={`${styles.list}`}>Login</li>
             </Link>
-          </li>
-          <li className={`${styles.list}`}>
             <Link href="/cart">
-              <a className={`${styles.link} ${styles.cart}`}>
+              <li className={`${styles.list}`}>
                 Cart <span> ({count}) </span>
-              </a>
+              </li>
             </Link>
-          </li>
-        </ul>
+          </ul>
+        </nav>
 
         <Link href="/">
-          <a
-            className={`${styles.logo} ${styles.active} `}
-            onClick={() => setVisible(!visible)}
-          >
+          <a className={`${styles.logo}`} onClick={() => setVisible(false)}>
             <Image src={logo} alt="logo" />
           </a>
         </Link>
-      </div>
 
-      <div
-        className={visible ? styles.menu_active : styles.burger}
-        onClick={() => setVisible(!visible)}
-      ></div>
-    </header>
+        <div className={`${styles.burger}`} onClick={handelMenu}>
+          menu
+        </div>
+      </header>
+    </>
   );
 };

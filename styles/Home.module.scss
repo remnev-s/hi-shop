@@ -114,3 +114,8 @@
     flex-direction: column;
   }
 }
+.main {
+  @media only screen and (max-width: 414px) {
+    margin-bottom: 30rem;
+  }
+}
